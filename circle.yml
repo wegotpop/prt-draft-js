@@ -1,0 +1,15 @@
+dependencies:
+  cache_directories:
+    - ~/.cache/yarn
+  override:
+    - yarn
+machine:
+  environment:
+    PATH: "${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
+  node:
+    version: 8
+test:
+  override:
+      - yarn test
+  post:
+      - yarn lint
