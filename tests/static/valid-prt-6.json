@@ -1,0 +1,34 @@
+{
+  "type"     : "PRTDocument",
+  "dialect"  : "pop-draft",
+  "version"  : "2.0",
+  "elements" :
+  [
+    "Hello ",
+    [1, null, "World"],
+    " ",
+    [2, null, "My Ol"],
+    "d Friend",
+    [3, null, [
+      "I'm ",
+      [10, null, "an"],
+      " h1"
+    ]],
+    [13, null, [
+      "This is what you s",
+      [15, null, "hould expe"],
+      "ct"
+    ]],
+    [-2, null, "top-level #1"],
+    [-2, null, [
+      "top-level #2",
+      [-3, null, [
+        "mid-",
+        [1, null, "level"],
+        " #1",
+        [-2, null, "bottom-level #1"]
+      ]]
+    ]],
+    [-2, null, "top-level #3"]
+  ]
+}

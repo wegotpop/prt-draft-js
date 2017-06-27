@@ -1,0 +1,6 @@
+{
+  "type"     : "PRTDocument",
+  "dialect"  : "pop-draft",
+  "version"  : "2.0",
+  "elements" : "Hello prt-draft-js :)"
+}

@@ -1,0 +1,10 @@
+{
+  "type"     : "PRTDocument",
+  "dialect"  : "pop-draft",
+  "version"  : "2.0",
+  "elements" :
+  [
+    [0, {"href": "#", "target": "_blank"}, "click"],
+    [3, null, [[0, {"href": "#", "target": "_blank"}, "title"]]]
+  ]
+}

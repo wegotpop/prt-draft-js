@@ -1,0 +1,7 @@
+# dirs
+node_modules/
+coverage/
+lib/
+
+# files
+.eslintcache

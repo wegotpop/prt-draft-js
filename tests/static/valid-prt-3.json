@@ -1,0 +1,15 @@
+{
+  "type"     : "PRTDocument",
+  "dialect"  : "pop-draft",
+  "version"  : "2.0",
+  "elements" :
+  [
+    "Weird ",
+    "string ",
+    "chunks ",
+    "which ",
+    "are ",
+    "not ",
+    "combined..."
+  ]
+}

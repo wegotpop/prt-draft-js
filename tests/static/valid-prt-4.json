@@ -1,0 +1,23 @@
+{
+  "type"     : "PRTDocument",
+  "dialect"  : "pop-draft",
+  "version"  : "2.0",
+  "elements" :
+  [
+    [1, null, [
+      "bold|",
+      [10, null, [
+        "bold_italic|",
+        [2, null, [
+          "bold_italic_code|",
+          [15, null, "bold_italic_code_underline|"]
+        ]]
+      ]],
+      [2, null, [
+        [15, null, "bold_code_underline|"]
+      ]],
+      [10, null, "bold_italic|"]
+    ]],
+    "regular"
+  ]
+}

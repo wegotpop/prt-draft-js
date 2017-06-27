@@ -1,0 +1,58 @@
+{
+  "entityMap":
+  {
+    "0":
+    {
+      "type": "LINK",
+      "mutability": "IMMUTABLE",
+      "data":
+      {
+        "url": "#",
+        "target": "_blank"
+      }
+    },
+    "1":
+    {
+      "type": "LINK",
+      "mutability": "IMMUTABLE",
+      "data":
+      {
+        "url": "#",
+        "target": "_blank"
+      }
+    }
+  },
+  "blocks":
+  [
+    {
+      "text": "click",
+      "type": "unstyled",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges":
+      [
+        {
+          "offset": 0,
+          "length": 5,
+          "key": 0
+        }
+      ],
+      "data": {}
+    },
+    {
+      "text": "title",
+      "type": "header-one",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges":
+      [
+        {
+          "offset": 0,
+          "length": 5,
+          "key": 1
+        }
+      ],
+      "data": {}
+    }
+  ]
+}

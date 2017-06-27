@@ -1,0 +1,14 @@
+{
+  "entityMap": {},
+  "blocks":
+  [
+    {
+      "text": "Weird string chunks which are not combined...",
+      "type": "unstyled",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": [],
+      "data": {}
+    }
+  ]
+}

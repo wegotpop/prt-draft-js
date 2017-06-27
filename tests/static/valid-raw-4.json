@@ -1,0 +1,40 @@
+{
+  "entityMap": {},
+  "blocks":[
+    {
+      "text": "bold|bold_italic|bold_italic_code|bold_italic_code_underline|bold_code_underline|bold_italic|regular",
+      "type": "unstyled",
+      "depth": 0,
+      "inlineStyleRanges":
+      [
+        {
+          "offset": 0,
+          "length": 93,
+          "style": "BOLD"
+        },
+        {
+          "offset": 5,
+          "length": 56,
+          "style": "ITALIC"
+        },
+        {
+          "offset": 17,
+          "length": 64,
+          "style": "CODE"
+        },
+        {
+          "offset": 34,
+          "length": 47,
+          "style": "UNDERLINE"
+        },
+        {
+          "offset": 81,
+          "length": 12,
+          "style": "ITALIC"
+        }
+      ],
+      "entityRanges": [],
+      "data": {}
+    }
+  ]
+}
