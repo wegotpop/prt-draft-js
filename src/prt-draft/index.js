@@ -1,22 +1,17 @@
 /* @flow */
 
-/* Import PRT-client objects */
-import { registerPRTDialectByNameAndVersion } from 'prt-client';
-
 /* Import PRT-Draft objects */
 import PopDraftDialect, {
   PopDraftInvalidTagName,
+  PopDraftInvalidIdentifier,
+  PopDraftInvalidData,
+  PopDraftInvalidAttribute,
 } from 'prt-draft/dialect';
 
 import {
   convertPrtToDraftJs,
   convertDraftJsToPrt,
 } from 'prt-draft/convert';
-
-
-/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/* Register default dialect */
-registerPRTDialectByNameAndVersion('pop-draft', '2.0', PopDraftDialect);
 
 
 /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -31,4 +26,7 @@ export {
 
   /* Errors */
   PopDraftInvalidTagName,
+  PopDraftInvalidIdentifier,
+  PopDraftInvalidData,
+  PopDraftInvalidAttribute,
 };

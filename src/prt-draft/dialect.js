@@ -1,19 +1,21 @@
 /* @flow */
 
-/* Import PRT objects */
-import { PRTError }      from 'prt-client';
-import { PRTPOPDialect } from 'prt-client/v2';
-
 /* Import PRT-Draft objects */
 import { NO_DEPTH, HAS_DEPTH, INLINE, ENTITY } from 'prt-draft/enums.js';
 
+/*----------------------------------------------------------------------------*/
+export const PopDraftError = function () {
+  this.message = 'An error occured';
+};
+PopDraftError.prototype      = Object.create(Error.prototype);
+PopDraftError.prototype.name = 'PopDraftError';
 
 /*----------------------------------------------------------------------------*/
 export const PopDraftInvalidTagName = function (tag: PRTPlainText) {
   this.message = 'Invalid tag name for pop dialect: ' +
                  `${tag.toString()} (type ${typeof tag})`;
 };
-PopDraftInvalidTagName.prototype      = Object.create(PRTError.prototype);
+PopDraftInvalidTagName.prototype      = Object.create(PopDraftError.prototype);
 PopDraftInvalidTagName.prototype.name = 'PopDraftInvalidTagName';
 
 
@@ -22,7 +24,7 @@ export const PopDraftInvalidIdentifier = function (tag: PRTPlainText) {
   this.message = 'Invalid identifier for pop dialect: ' +
                  `${tag.toString()} (type ${typeof tag})`;
 };
-PopDraftInvalidIdentifier.prototype      = Object.create(PRTError.prototype);
+PopDraftInvalidIdentifier.prototype      = Object.create(PopDraftError.prototype);
 PopDraftInvalidIdentifier.prototype.name = 'PopDraftInvalidIdentifier';
 
 
@@ -31,7 +33,7 @@ export const PopDraftInvalidData = function (identifier, data) {
   this.message = `Invalid data key for identifier ${identifier} dialect: ` +
                  `${data.toString()} (type ${typeof data})`;
 };
-PopDraftInvalidData.prototype      = Object.create(PRTError.prototype);
+PopDraftInvalidData.prototype      = Object.create(PopDraftError.prototype);
 PopDraftInvalidData.prototype.name = 'PopDraftInvalidData';
 
 
@@ -40,12 +42,12 @@ export const PopDraftInvalidAttribute = function (identifier, data) {
   this.message = `Invalid attribute name for identifier ${identifier} ` +
                  `dialect: ${data.toString()} (type ${typeof data})`;
 };
-PopDraftInvalidAttribute.prototype      = Object.create(PRTError.prototype);
+PopDraftInvalidAttribute.prototype      = Object.create(PopDraftError.prototype);
 PopDraftInvalidAttribute.prototype.name = 'PopDraftInvalidAttribute';
 
 
 /*----------------------------------------------------------------------------*/
-class PopDraftDialect extends PRTPOPDialect {
+class PopDraftDialect {
 
   /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
   styleToIdentifier = tagName => {

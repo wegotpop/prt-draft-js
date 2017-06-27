@@ -7,39 +7,23 @@ component-wrapper class to work with.
 ### Table of Content
 
 - [PRTv2.0](#prtv20)
-    - [React component](#react-component)
+    - [Converters](#converters)
 - [Lincese](#license)
 
 
 ## PRTv2.0
 
-### React component
+### Converters
 
 > TODO: Add **real** documentation here...
 
-Using the following `MyComponent`:
-
 ```js
-import { Component } from 'react';
-import PRTDraftJS from 'prt/draft-js';
+import {
+  convertPrtToDraftJs,
+  convertDraftJsToPrt,
+} from 'prt/draft-js';
 
-class MyEditor extends Component {
-
-  onSave = (prtDocument) => {
-    console.log(`Pushing document to server: ${prtDocument}`);
-    // push data to server...
-  };
-
-  onLoad = () => {
-    const prtDocument = // pull data from server...
-    console.log(`Document pulled from server: ${prtDocument}`);
-    return prtDocument;
-  };
-
-  render = () => {
-    return <PRTDraftJS onSave={this.onSave} onLoad={this.onLoad} />;
-  };
-}
+/* ... */
 ```
 
 ## License
