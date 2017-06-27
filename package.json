@@ -1,6 +1,6 @@
 {
   "name": "prt-draft-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "PRT to Draft.js and vice versa converter ",
   "author": "We Got POP Ltd",
   "license": "MIT",
@@ -46,7 +46,7 @@
     "react-dom": "^15.5.4",
     "react-hot-loader": "^1.3.1",
     "react-test-renderer": "^15.5.4",
-    "rimraf":"^2.6.1",
+    "rimraf": "^2.6.1",
     "webpack": "^2.6.1",
     "webpack-dev-middleware": "^1.10.2",
     "webpack-hot-middleware": "^2.18.0"
