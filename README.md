@@ -1,4 +1,5 @@
 # PRT
+[![CircleCI](https://circleci.com/gh/wegotpop/prt-draft-js.svg?style=svg)](https://circleci.com/gh/wegotpop/prt-draft-js)
 
 This repository implements the [PRT][1] serialisation to and from the
 [Draft.js][2] editor. It contains the converter functions, and a convenient
