@@ -135,23 +135,23 @@ class PopDraftDialect {
   /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
   dataToAttribute = (identifier, name, value) => {
     const invalid = () => {
-      throw new PopDraftInvalidData(identifier, name)
+      throw new PopDraftInvalidData(identifier, name);
     };
     switch (identifier) {
       case 0x00:
         switch (name) {
-          case "url":
-            return ["href", value];
-          case "target":
+          case 'url':
+            return ['href', value];
+          case 'target':
             return [name, value];
           default:
             invalid();
         }
       case 0x0B:
         switch (name) {
-          case "alt":
-          case "src":
-          case "title":
+          case 'alt':
+          case 'src':
+          case 'title':
             return [name, value];
           default:
             invalid();
@@ -165,23 +165,23 @@ class PopDraftDialect {
   /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
   attributeToData = (style, name, value) => {
     const invalid = () => {
-      throw new PopDraftInvalidAttribute(style, name)
+      throw new PopDraftInvalidAttribute(style, name);
     };
     switch (style) {
       case 'LINK':
         switch (name) {
-          case "href":
-            return ["url", value];
-          case "target":
+          case 'href':
+            return ['url', value];
+          case 'target':
             return [name, value];
           default:
             invalid();
         }
       case 'image':
         switch (name) {
-          case "alt":
-          case "src":
-          case "title":
+          case 'alt':
+          case 'src':
+          case 'title':
             return [name, value];
           default:
             invalid();

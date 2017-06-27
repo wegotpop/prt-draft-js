@@ -98,7 +98,7 @@ const elementToBlocksAndEntityMap = (
         tempDepth = depth + 1;
       case NO_DEPTH:
         tempBlocks = [];
-        cursor[0] = 0
+        cursor[0] = 0;
         elementsToBlocksAndEntityMap(
           elements,
           tempBlocks,
