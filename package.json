@@ -5,9 +5,16 @@
   "author": "We Got POP Ltd",
   "license": "MIT",
   "private": false,
+  "files": [
+    "lib"
+  ],
+  "main": "lib/prt-draft/index.js",
   "scripts": {
     "test": "jest",
-    "lint": "eslint --cache ./src && eslint --cache ./tests"
+    "lint": "eslint --cache ./src && eslint --cache ./tests",
+    "build": "NODE_ENV=production babel src --out-dir lib --copy-files",
+    "prebuild": "rimraf lib/*",
+    "prepublish": "npm run build"
   },
   "peerDependencies": {
     "draft-js": "^0.10.1",
@@ -39,6 +46,7 @@
     "react-dom": "^15.5.4",
     "react-hot-loader": "^1.3.1",
     "react-test-renderer": "^15.5.4",
+    "rimraf":"^2.6.1",
     "webpack": "^2.6.1",
     "webpack-dev-middleware": "^1.10.2",
     "webpack-hot-middleware": "^2.18.0"

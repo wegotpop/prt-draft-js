@@ -21,7 +21,7 @@ component-wrapper class to work with.
 import {
   convertPrtToDraftJs,
   convertDraftJsToPrt,
-} from 'prt/draft-js';
+} from 'prt-draft-js';
 
 /* ... */
 ```
