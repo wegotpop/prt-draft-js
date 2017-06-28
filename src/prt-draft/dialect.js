@@ -145,7 +145,7 @@ class PopDraftDialect {
           case 'target':
             return [name, value];
           default:
-            invalid();
+            return invalid();
         }
       case 0x0B:
         switch (name) {
@@ -154,10 +154,10 @@ class PopDraftDialect {
           case 'title':
             return [name, value];
           default:
-            invalid();
+            return invalid();
         }
       default:
-        invalid();
+        return invalid();
     }
   };
 
@@ -175,7 +175,7 @@ class PopDraftDialect {
           case 'target':
             return [name, value];
           default:
-            invalid();
+            return invalid();
         }
       case 'image':
         switch (name) {
@@ -184,10 +184,10 @@ class PopDraftDialect {
           case 'title':
             return [name, value];
           default:
-            invalid();
+            return invalid();
         }
       default:
-        invalid();
+        return invalid();
     }
   };
 }

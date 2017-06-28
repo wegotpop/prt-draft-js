@@ -24,7 +24,9 @@ const elementToBlocksAndEntityMap = (
     let   [style, kind] = dialect.identifierToStyleAndType(identifier);
 
     let offset;
-    let length;
+    let key;
+    let attributesKeys;
+    let data;
     let tempBlocks;
     let tempInlineStyleRanges;
     let tempDepth = depth;
@@ -52,9 +54,9 @@ const elementToBlocksAndEntityMap = (
         break;
 
       case ENTITY:
-        const key = Object.keys(entityMap).length;
-        const attributesKeys = Object.keys(attributes);
-        const data = {};
+        key = Object.keys(entityMap).length;
+        attributesKeys = Object.keys(attributes);
+        data = {};
         for (let i=0; i<attributesKeys.length; ++i) {
           const attributeKey = attributesKeys[i];
           const [name, value] = dialect.attributeToData(
@@ -96,6 +98,7 @@ const elementToBlocksAndEntityMap = (
 
       case HAS_DEPTH:
         tempDepth = depth + 1;
+      /* eslint-disable-next-line no-fallthrough */
       case NO_DEPTH:
         tempBlocks = [];
         cursor[0] = 0;

@@ -17,6 +17,9 @@ const Dialect = new PopDraftDialect();
 export type PrtToDraft = (PRTDocument) => Object;
 export const convertPrtToDraftJs: PrtToDraft = (document) => {
   const { _, version, dialect, elements } = document;
+  /* TODO: Create dialect and version based conversion */
+  version;
+  dialect;
   return prtToDraftJs(elements, Dialect);
 };
 

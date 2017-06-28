@@ -63,11 +63,13 @@ test('Valid Convert DraftJS to PRT', () => {
 
 
 /*----------------------------------------------------------------------------*/
+/* eslint-disable jest/no-disabled-tests */
 test.skip('https://github.com/wegotpop/prt/issues/3', () => {
   /* String chunks */
   expect(convertDraftJsToPrt(VALID_RAW_DATA_3, '2.0', 'pop-draft'))
     .toEqual(VALID_PRT_DATA_3);
 });
+/* eslint-enable jest/no-disabled-tests */
 
 
 /*----------------------------------------------------------------------------*/
