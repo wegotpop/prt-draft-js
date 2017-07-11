@@ -136,7 +136,7 @@ class PopDraftDialect {
       /* Strikethrough */
       case 0x12 : return ['STRIKETHROUGH'      , INLINE];
       /* Span */
-      case 0x13 : return ['__SPAN'             , INLINE]
+      case 0x13 : return ['__SPAN'             , INLINE];
       /* Subscript */
       case 0x14 : return ['__SUB'              , INLINE];
       /* Superscript */
