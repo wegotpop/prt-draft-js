@@ -56,34 +56,44 @@ class PopDraftDialect {
       case 'LINK'                : return 0x00;
       /* Bold */
       case 'BOLD'                : return 0x01;
+      /* Quate */
+      case 'blockquote'          : return 0x02;
       /* Code */
-      case 'CODE'                : return 0x02;
+      case 'CODE'                : return 0x03;
+      /* Divider */
+      case 'figure'              : return 0x04;
       /* Headers */
-      case 'header-one'          : return 0x03;
-      case 'header-two'          : return 0x04;
-      case 'header-three'        : return 0x05;
-      case 'header-four'         : return 0x06;
-      case 'header-five'         : return 0x07;
-      case 'header-six'          : return 0x08;
-      case 'header-seven'        : return 0x09;
+      case 'header-one'          : return 0x05;
+      case 'header-two'          : return 0x06;
+      case 'header-three'        : return 0x07;
+      case 'header-four'         : return 0x08;
+      case 'header-five'         : return 0x09;
+      case 'header-six'          : return 0x0A;
+      case 'header-seven'        : return 0x0B;
       /* Italic */
-      case 'ITALIC'              : return 0x0A;
+      case 'ITALIC'              : return 0x0C;
       /* Image */
-      case 'image'               : return 0x0B;
+      case 'image'               : return 0x0D;
+      /* List item */
+      case '__LI'                : return 0x0E;
+      /* Ordered list */
+      case 'ordered-list-item'   : return 0x0F;
       /* Paragraph */
+      case '__P'                 : return 0x10;
       /* Preformatted */
-      case 'code-block'          : return 0x0D;
+      case 'code-block'          : return 0x11;
       /* Strikethrough */
-      case 'STRIKETHROUGH'       : return 0x0E;
+      case 'STRIKETHROUGH'       : return 0x12;
+      /* Span */
+      case '__SPAN'              : return 0x13;
+      /* Subscript */
+      case '__SUB'               : return 0x14;
+      /* Superscript */
+      case '__SUP'               : return 0x15;
       /* Underline */
-      case 'UNDERLINE'           : return 0x0F;
-
-      case 'blockquote'          : return -1;
-      case 'unordered-list-item' : return -2;
-      case 'ordered-list-item'   : return -3;
-
-      case 'figure'              : return -4; // should return DIV
-
+      case 'UNDERLINE'           : return 0x16;
+      /* Unordered list */
+      case 'unordered-list-item' : return 0x17;
       /* Unknown */
       default:
         throw new PopDraftInvalidTagName(tagName);
@@ -97,33 +107,44 @@ class PopDraftDialect {
       case 0x00 : return ['LINK'               , ENTITY];
       /* Bold */
       case 0x01 : return ['BOLD'               , INLINE];
+      /* Quate */
+      case 0x02 : return ['blockquote'         , NO_DEPTH];
       /* Code */
-      case 0x02 : return ['CODE'               , INLINE];
+      case 0x03 : return ['CODE'               , INLINE];
+      /* Divider */
+      case 0x04 : return ['figure'             , NO_DEPTH];
       /* Headers */
-      case 0x03 : return ['header-one'         , NO_DEPTH];
-      case 0x04 : return ['header-two'         , NO_DEPTH];
-      case 0x05 : return ['header-three'       , NO_DEPTH];
-      case 0x06 : return ['header-four'        , NO_DEPTH];
-      case 0x07 : return ['header-five'        , NO_DEPTH];
-      case 0x08 : return ['header-six'         , NO_DEPTH];
-      case 0x09 : return ['header-seven'       , NO_DEPTH];
+      case 0x05 : return ['header-one'         , NO_DEPTH];
+      case 0x06 : return ['header-two'         , NO_DEPTH];
+      case 0x07 : return ['header-three'       , NO_DEPTH];
+      case 0x08 : return ['header-four'        , NO_DEPTH];
+      case 0x09 : return ['header-five'        , NO_DEPTH];
+      case 0x0A : return ['header-six'         , NO_DEPTH];
+      case 0x0B : return ['header-seven'       , NO_DEPTH];
       /* Italic */
-      case 0x0A : return ['ITALIC'             , INLINE];
+      case 0x0C : return ['ITALIC'             , INLINE];
       /* Image */
-      case 0x0B : return ['image'              , ENTITY];
+      case 0x0D : return ['image'              , ENTITY];
+      /* List item */
+      case 0x0E : return ['__LI'               , INLINE];
+      /* Ordered list */
+      case 0x0F : return ['ordered-list-item'  , HAS_DEPTH];
       /* Paragraph */
+      case 0x10 : return ['__P'                , INLINE];
       /* Preformatted */
-      case 0x0D : return ['code-block'         , NO_DEPTH];
+      case 0x11 : return ['code-block'         , NO_DEPTH];
       /* Strikethrough */
-      case 0x0E : return ['STRIKETHROUGH'      , INLINE];
+      case 0x12 : return ['STRIKETHROUGH'      , INLINE];
+      /* Span */
+      case 0x13 : return ['__SPAN'             , INLINE];
+      /* Subscript */
+      case 0x14 : return ['__SUB'              , INLINE];
+      /* Superscript */
+      case 0x15 : return ['__SUP'              , INLINE];
       /* Underline */
-      case 0x0F : return ['UNDERLINE'          , INLINE];
-
-      case -1   : return ['blockquote'         , NO_DEPTH];
-      case -2   : return ['unordered-list-item', HAS_DEPTH];
-      case -3   : return ['ordered-list-item'  , HAS_DEPTH];
-
-      case -4   : return ['figure'             , NO_DEPTH];
+      case 0x16 : return ['UNDERLINE'          , INLINE];
+      /* Unordered list */
+      case 0x17 : return ['unordered-list-item', HAS_DEPTH];
 
       /* Unknown */
       default:
@@ -147,7 +168,7 @@ class PopDraftDialect {
           default:
             return invalid();
         }
-      case 0x0B:
+      case 0x0D:
         switch (name) {
           case 'alt':
           case 'src':

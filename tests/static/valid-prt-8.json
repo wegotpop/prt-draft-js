@@ -5,6 +5,6 @@
   "elements" :
   [
     [0, {"href": "#", "target": "_blank"}, "click"],
-    [3, null, [[0, {"href": "#", "target": "_blank"}, "title"]]]
+    [5, null, [[0, {"href": "#", "target": "_blank"}, "title"]]]
   ]
 }
