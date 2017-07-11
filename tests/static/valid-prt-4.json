@@ -6,17 +6,17 @@
   [
     [1, null, [
       "bold|",
-      [10, null, [
+      [12, null, [
         "bold_italic|",
-        [2, null, [
+        [3, null, [
           "bold_italic_code|",
-          [15, null, "bold_italic_code_underline|"]
+          [22, null, "bold_italic_code_underline|"]
         ]]
       ]],
-      [2, null, [
-        [15, null, "bold_code_underline|"]
+      [3, null, [
+        [22, null, "bold_code_underline|"]
       ]],
-      [10, null, "bold_italic|"]
+      [12, null, "bold_italic|"]
     ]],
     "regular"
   ]
